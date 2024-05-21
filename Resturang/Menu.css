@@ -1,0 +1,115 @@
+body {
+  /* Nollställning av marginal och användning av typsnitt */
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #006994;
+}
+
+header {
+  /* Sidhuvud med bakgrundsfärg och textfärg */
+  background-color: rgb(29, 65, 104);
+  color: #ffffff;
+  padding: 1rem 0;
+
+  /* Navigationsmeny med flexbox-layout */
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      /* Behållare för navigationsmeny och logotyp */
+      .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 90%;
+          margin: 0 auto;
+
+          /* Företagslogotyp med storlek och marginal */
+          .logo {
+              font-size: 1.5rem;
+              margin: 0;
+          }
+
+          /* Lista med navigationslänkar utan punkter */
+          .nav-list {
+              list-style: none;
+              display: flex;
+              margin: 0;
+
+              /* En enskild navigationslänk med marginal */
+              li {
+                  margin: 0 1rem;
+
+                  /* Navigationslänk utan understrykning, vit text och övergångseffekt */
+                  a {
+                      text-decoration: none;
+                      color: #ffffff;
+                      transition: color 0.3s ease-in-out;
+                  }
+              }
+          }
+      }
+  }
+}
+
+.menu-container {
+  /* Flexbox-layout för menyobjekt med omgivande mellanrum */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+
+  /* En enskild menyartikel med centrering, marginal och bakgrundsfärg */
+  .menu-item {
+      text-align: center;
+      margin: 1rem;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+
+      /* Förstorning av menyobjekt vid hovring */
+      &:hover {
+          transform: scale(1.05);
+      }
+
+      /* Bild på matobjekt med storlek, maxhöjd och rundade hörn */
+      img {
+          width: 100%; 
+          max-height: 250px; 
+          object-fit: cover; 
+          border-radius: 5px; 
+      }
+
+      /* Knapp för att lägga till i varukorgen med färg, textfärg och övergångseffekter */
+      .add-to-cart {
+          background-color: #008dc7;
+          color: #ffffff;
+          border: none;
+          padding: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 1rem;
+          transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+          /* Förstorning och färgändring vid hovring */
+          &:hover {
+              background-color: #005a81;
+              transform: scale(1.1);
+          }
+      }
+  }
+}
+
+footer {
+  /* Sidfot med bakgrundsfärg, textfärg, centrering och fast position längst ned */
+  background-color: rgb(29, 65, 104);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

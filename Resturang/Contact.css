@@ -1,0 +1,131 @@
+body {
+  /* Nollställning av marginal och användning av typsnitt */
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #006994;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  /* Sidhuvud med bakgrundsfärg och textfärg */
+  background-color: rgb(29, 65, 104);
+  color: #ffffff;
+  padding: 1rem 0;
+
+  /* Navigationsmeny med flexbox-layout */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Behållare för navigationsmeny och logotyp */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+
+      /* Företagslogotyp med storlek och marginal */
+      .logo {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      /* Lista med navigationslänkar utan punkter */
+      .nav-list {
+        list-style: none;
+        display: flex;
+        margin: 0;
+
+        /* En enskild navigationslänk med marginal */
+        li {
+          margin: 0 1rem;
+
+          /* Navigationslänk utan understrykning, vit text och övergångseffekt */
+          a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-section {
+  /* Bakgrundsfärg, fyllning, textcentrering och flexbox-layout för kontaktsektionen */
+  background-color: #006994;
+  padding: 2rem 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Kontainer för kontaktinformation med justering av maxbredd */
+  .contact-container {
+    max-width: 80%;
+    margin: 0 auto;
+
+    /* Rubrik för kontaktsidan med storlek och animering */
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 4rem;
+      color: #ffffff;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.4s;
+    }
+
+    /* Informationstext med färg, animering och fördröjning */
+    p {
+      color: #ffffff;
+      font-size: 1.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.8s;
+    }
+
+    /* Kontaktinformation med övergripande marginal */
+    .contact-info {
+      margin-top: 2rem;
+
+      /* Enskilda kontaktuppgifter med ytterligare marginal */
+      p {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  /* Animation för fade-in-effekt vid uppstigning */
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  /* Bakgrundsfärg, textfärg, centrering, fast position längst ned och textstorlek */
+  background-color: rgb(29, 65, 104);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

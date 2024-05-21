@@ -1,0 +1,118 @@
+body {
+    /* Nollställning av marginal och användning av typsnitt */
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(to right, #006994, #00557D);
+    color: #ffffff;
+}
+
+header {
+    /* Sidhuvud med bakgrundsfärg och textfärg */
+    background: linear-gradient(to right, #1D4168, #00476E);
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+header .navbar {
+    /* Flexbox-layout för navigationsmeny */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar .container {
+    /* Flexbox-layout för behållare av navigationsmeny och logotyp */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header .navbar .container .logo {
+    /* Storlek och fetstil för logotyp */
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+header .navbar .container .nav-list {
+    /* Lista med navigationslänkar utan punkter */
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+header .navbar .container .nav-list li {
+    /* Marginal för enskilda navigationslänkar */
+    margin: 0 1.5rem;
+}
+
+header .navbar .container .nav-list li a {
+    /* Navigationslänkar utan understrykning, vit text och övergångseffekt */
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+    font-size: 1.2rem;
+}
+
+header .navbar .container .nav-list li a:hover {
+    /* Färgändring vid hovring på navigationslänk */
+    color: #008dc7;
+}
+
+.about-section {
+    /* Bakgrundsfärg, fyllning, textcentrering och flexbox-layout för Om oss-sektion */
+    background-color: #006994;
+    padding: 3rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70rem;
+}
+
+.about-section .container {
+    /* Justering av maxbredd för bättre responsivitet */
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.about-section .about-content {
+    /* Inmatning av fadeInUp-animation och textstorlek */
+    animation: fadeInUp 1s ease-out;
+    font-size: 1.5rem;
+}
+
+.about-section .about-content .founder {
+    /* Fetstil, kursiv, färg och marginal för grundaren */
+    font-weight: bold;
+    font-style: italic;
+    color: #008dc7;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+@keyframes fadeInUp {
+    /* Animation för fade-in-effekt vid uppstigning */
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    /* Bakgrundsfärg, textfärg, centrering, fast position längst ned och textstorlek */
+    background: linear-gradient(to right, #1D4168, #00476E);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+}
